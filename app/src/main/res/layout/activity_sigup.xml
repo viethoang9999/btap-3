@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F2">
+
+    <ImageView
+        android:id="@+id/imgBackgroundTop"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_login"
+        android:contentDescription="Login background" />
+
+    <!--Welcome Back -->
+    <TextView
+        android:paddingHorizontal="30dp"
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome\nBack"
+        android:textColor="#E65C1A"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="300dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        android:layout_below="@id/tvWelcome"
+        android:layout_marginTop="40dp">
+
+        <!--nhập Email -->
+        <EditText
+            android:id="@+id/edtUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User"
+            android:inputType="text"
+            android:backgroundTint="#B0B0B0"
+            android:drawableStart="@drawable/name"
+            android:drawablePadding="10dp"
+            android:paddingVertical="10dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Ô nhập Password -->
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#B0B0B0"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#B0B0B0"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingVertical="10dp"
+            android:textSize="16sp" />
+
+        <!-- Text đăng ký -->
+        <ImageButton
+            android:id="@+id/btnLogin"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_arrow2"
+            android:contentDescription="Login" />
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:gravity="center"
+            android:text="Forgot your password? Recovery it"
+            android:textColor="#0A57C9"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
