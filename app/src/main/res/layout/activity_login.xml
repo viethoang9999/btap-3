@@ -1,86 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF5F2">
 
-    <ImageView
-        android:id="@+id/imgBackgroundTop"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/background_login"
-        android:contentDescription="Login background" />
+        android:layout_height="wrap_content">
 
-    <!--Welcome Back -->
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome\nBack"
-        android:textColor="#E65C1A"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="350dp" />
-
-    <LinearLayout
-        android:id="@+id/layoutForm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingHorizontal="30dp"
-        android:layout_below="@id/tvWelcome"
-        android:layout_marginTop="40dp">
-
-        <!-- Ô nhập Email -->
-        <EditText
-            android:id="@+id/edtEmail"
+        <!-- Ảnh nền -->
+        <ImageView
+            android:id="@+id/imgBackgroundTop"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:backgroundTint="#B0B0B0"
-            android:drawableStart="@drawable/email"
-            android:drawablePadding="10dp"
-            android:paddingVertical="10dp"
-            android:textSize="16sp"
-            android:layout_marginBottom="16dp" />
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/background_login" />
 
-        <!-- Ô nhập Password -->
-        <EditText
-            android:id="@+id/edtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:backgroundTint="#B0B0B0"
-            android:drawableStart="@drawable/password"
-            android:drawablePadding="10dp"
-            android:paddingVertical="10dp"
-            android:textSize="16sp"
-            android:layout_marginBottom="30dp" />
-
-        <ImageButton
-            android:id="@+id/btnLogin"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_gravity="end"
-            android:background="@drawable/btn_arraw1"
-            android:contentDescription="Login"
-            android:layout_marginBottom="40dp" />
-
-        <!-- Text đăng ký -->
+        <!-- Welcome Back -->
         <TextView
-            android:id="@+id/tvRegister"
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome\nBack"
+            android:textColor="#E65C1A"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="280dp" />
+
+        <!-- Form -->
+        <LinearLayout
+            android:id="@+id/layoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Forgot your password? Recovery it"
-            android:textColor="#0A57C9"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp"
+            android:layout_below="@id/tvWelcome"
+            android:layout_marginTop="40dp">
 
-    </LinearLayout>
+            <!-- Email -->
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="#909090"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="10dp"
+                android:paddingVertical="12dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
 
-</RelativeLayout>
+            <!-- Password -->
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:backgroundTint="#909090"
+                android:drawableStart="@drawable/password"
+                android:drawablePadding="10dp"
+                android:paddingVertical="12dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="30dp"/>
+
+            <!-- Nút mũi tên -->
+            <ImageButton
+                android:id="@+id/btnLogin"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="end"
+                android:background="@drawable/btn_arraw1"
+                android:contentDescription="Login"
+                android:layout_marginBottom="35dp"/>
+
+            <!-- 2 nút icon: Facebook + Google -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- FACEBOOK -->
+                <LinearLayout
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_social"
+                    android:layout_marginEnd="12dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/facebook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Facebook"
+                        android:textColor="#2A2A2A"
+                        android:textSize="15sp"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- GOOGLE -->
+                <LinearLayout
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_social">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/google" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Google"
+                        android:textColor="#2A2A2A"
+                        android:textSize="15sp"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Quên mật khẩu -->
+            <TextView
+                android:id="@+id/tvForgot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Forgot your password? Recovery it"
+                android:textColor="#0A57C9"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="25dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
